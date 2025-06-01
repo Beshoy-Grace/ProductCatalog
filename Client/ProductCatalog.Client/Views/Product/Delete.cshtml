@@ -1,0 +1,21 @@
+﻿@using ProductCatalog.Common.Product.Response
+@model GetProductResDTO
+
+<div class="container mt-5">
+    <h2>Delete Product</h2>
+
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@ViewData["ErrorMessage"]</div>
+    }
+
+    <div class="alert alert-warning">
+        Are you sure you want to delete <strong>@Model.Name</strong>?
+    </div>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
