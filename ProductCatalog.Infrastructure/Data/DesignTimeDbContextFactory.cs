@@ -16,7 +16,7 @@ namespace ProductCatalog.Infrastructure.Data
             var optionsBuilder = new DbContextOptionsBuilder<ProductCatalogContext>();
 
             // Use the connection string configured for your Azure SQL Database
-            optionsBuilder.UseSqlServer("Data Source=192.168.1.85;Initial Catalog=ProductCatalogDB;User ID=SJM_FVDBUser;Password=S@raSJM328311;Integrated Security=False;Trust Server Certificate=True;Encrypt=False");
+            optionsBuilder.UseSqlServer("");
 
             return new ProductCatalogContext(optionsBuilder.Options);
         }
