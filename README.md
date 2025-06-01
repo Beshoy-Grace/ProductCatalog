@@ -87,7 +87,16 @@ ProductCatalog.sln
 2. - **Set API as Startup Project**
     
     - In Visual Studio: Right-click `ProductCatalog.API` → Set as Startup Project
-        
+
+ **Update the Connection String:**
+
+	Modify the connection string in two places:
+	
+	appsettings.json in the ProductCatalog.Api project
+	
+	DesignTimeDbContextFactory.cs in the ProductCatalog.Infrastructure project
+
+
 - **Apply Migrations**  
     Open **Package Manager Console** and run:
 	Set-Project -Name ProductCatalog.Infrastructure Update-Database
